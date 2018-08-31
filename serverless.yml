@@ -1,0 +1,15 @@
+
+service: ask-ship-greeting
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  stage: dev
+  region: eu-west-1
+  versionFunctions: false
+
+functions:
+  ask:
+    handler: handler.handle
+    events:
+      - alexaSkill: amzn1.ask.skill.0dd13499-e6e1-452e-95ea-f4e509ad8ff7
